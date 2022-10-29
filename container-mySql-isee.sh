@@ -12,7 +12,7 @@
         echo \"instalando Docker\"
             echo 
             sudo apt update 
-            sleep 150
+            sleep 10
 
             sudo apt install docker.io -y
             sleep 10
