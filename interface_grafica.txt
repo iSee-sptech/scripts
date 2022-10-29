@@ -1,0 +1,10 @@
+*--------COLOCANDO SENHA PARA ACESSAR A EC2---------*
+sudo passwd ubuntu
+urubu100 [repetir senha x2]
+
+*-------INSTALANDO INTERFACE GRÁFICA----------*
+sudo apt update && sudo apt upgrade -y 
+sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y -y
+
+[selecionar lightdm] 
+[esperar alguns minutos]
