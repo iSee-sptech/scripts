@@ -3,40 +3,44 @@
 
     if [$? -eq 0]
         then
-        echo \"docker instalado\"
+        echo \"[Docker já instalado]\"
         sleep 3
     else
-        \"docker não instalado\"
+        echo \"[Docker ainda não instalado...]\"
         sleep 3
 
-        echo \"instalando Docker\"
+        echo \"[Preparando para iniciar instalação....Instalando Docker...]\"
             echo 
             sudo apt update 
-            sleep 10
+            sleep 4
 
             sudo apt install docker.io -y
-            sleep 10
+            sleep 4
             
             sudo systemctl start docker
             sudo systemctl enable docker
 
             sudo docker pull mysql:8
-            sleep 10
+            sleep 4
 
             sudo docker run -d -p 3306:3306 --name ContainerMySql -e "MYSQL_DATABASE=isee" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:8
 
-            echo \"Acessando o Container\"
+            echo \"[Criando Container de MySql...Acessando o Container...]\"
+            sleep 2
+            
             sudo su
             docker exec -it ContainerMySql bash
             mysql -u root -p
             urubu100
-
+            sleep 1
+            
+            use isee;
                 ---------------------------
                 Script criação de tabelas
                 ---------------------------
             
             sleep 3
             exit
-            echo \*Docker e tabelas criadas*\
+            echo \*[Imagem de MySQL em Container Docker instalada...e tabelas mySQL criadas :)]*\
             sleep 3
     fi
