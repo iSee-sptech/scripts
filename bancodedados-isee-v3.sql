@@ -7,10 +7,10 @@ nomeUsuario varchar (100),
 cargoUsuario varchar (30),
 emailUsuario varchar (70) unique,
 cepUsuario char (9),
-cpfUsuario char (14),
+cpfUsuario char (14) unique not null,
 telefoneUsuario char (15) unique,
 crmUsuario  char (6),
-senhaUsuario varchar (20),
+senhaUsuario varchar (20) not null,
 dataNascUsuario date,
 imagemPerfilUsuario varchar (255),
 numeroLocalUsuario varchar (6),
@@ -28,7 +28,7 @@ nomeMaquina varchar (100),
 discoMaquina varchar(100),
 ramMaquina varchar(100),
 processadorMaquina varchar(100),
-cepMaquina varchar (9),
+cepMaquina char (9),
 imgMaquina varchar (255),
 complementoMaquina varchar (50),
 pontoReferenciaMaquina varchar (25),
@@ -40,13 +40,12 @@ references Usuarios (idUsuario)
 
 create table Etiqueta (
 idEtiqueta int primary key auto_increment,
-nomeEtiqueta varchar(30),
-dataGerada datetime,
 fkMaquina int,
+nomeEtiqueta varchar(50),
+datahoraEtiqueta datetime,
 foreign key (fkMaquina)
 references Maquinas (idMaquina)
 );
-select * from etiqueta;
 
 create table Historico (
 idHistorico int primary key auto_increment,
@@ -71,11 +70,12 @@ foreign key (fkUsuario)
 references Usuarios (idUsuario)
 );
 
-create table alertas(
+create table Alerta (
 idAlerta int primary key auto_increment,
-componenteAlerta varchar(10),
-nivelAlerta varchar(10),
 fkMaquina int,
+componente varchar(10),
+nivelAlerta varchar(10),
+datahoraAlerta datetime,
 foreign key (fkMaquina)
-references Maquina (idMaquina) 
+references Maquinas (idMaquina)
 );
