@@ -21,6 +21,6 @@ if [ $? -eq 0 ]
         sudo apt-get install default-jre -y
         sleep 10
         clear
-        echo \"[Java instalado - versão 11 :)]\"
+        echo \"[Java instalado - versão 11 ]\"
         sleep 2
 fi
