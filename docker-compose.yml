@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    enviroment:
+        MYSQL_ROOT_PASSWORD:
+        MYSQL_DATABASE:
+        MYSQL_USER
+        MYSQL_PASSWORD:
+            
+      volumes: 
+          - ./init:/docker-entrypouint-initdb:d
+            
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+          -8000:8000
