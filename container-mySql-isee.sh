@@ -22,8 +22,10 @@
 
             sudo docker pull mysql:8
             sleep 4
-
-            sudo docker run -d -p 3306:3306 --name ContainerMySql -e "MYSQL_DATABASE=isee" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:8
+            
+            docker create -v /var/lib/mysql --name mysqldata mysql:8
+            
+            sudo docker run -p 3306:3306 -d -e "MYSQL_ROOT_PASSWORD=urubu100" --volumes-from mysqldata --name=ContainerMySql mysql:8
 
             echo \"[Criando Container de MySql...Acessando o Container...]\"
             sleep 2
