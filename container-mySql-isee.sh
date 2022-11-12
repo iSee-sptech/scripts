@@ -28,7 +28,7 @@
             echo \"[Criando Container de MySql...Acessando o Container...]\"
             sleep 2
             
-            sudo su
+            
             docker exec -it ContainerMySql mysql -u root -purubu100 -D isee -e "
 create table Usuarios (
 idUsuario int primary key auto_increment,
