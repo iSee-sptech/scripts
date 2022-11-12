@@ -23,4 +23,8 @@ if [ $? -eq 0 ]
         clear
         echo \"[Java instalado - versão 11 ]\"
         sleep 2
+        
+        echo \"[Chamando instalador Docker...]\"
+        sudo ./container-mysql-isee
+        sleep 1
 fi
