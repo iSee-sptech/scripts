@@ -30,7 +30,7 @@
             sleep 2
             
             
-            docker exec -it ContainerMySql mysql -u root -purubu100 -D isee -e "
+            sudo docker exec -it ContainerMySql mysql -u root -purubu100 -D isee -e "
 create table Usuarios (
 idUsuario int primary key auto_increment,
 nomeUsuario varchar (100),
