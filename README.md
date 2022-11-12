@@ -5,5 +5,5 @@ Repositório para scripts
 1. Entrar via terminal <br>
 2. Clonar repositório na pasta Downloads <br>
 3. Entrar na pasta scripts <br>
-4. Executar sudo chmod +x <nome_arquivo> <br>
-5. Para executar o arquivo sudo ./<nome_arquivo>
+4. Executar sudo chmod +x [nome_arquivo] <br>
+5. Para executar o arquivo sudo ./[nome_arquivo]
