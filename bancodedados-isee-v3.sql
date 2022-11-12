@@ -1,3 +1,4 @@
+create database iSee;
 use iSee;
 
 create table Usuarios (
