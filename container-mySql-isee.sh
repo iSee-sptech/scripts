@@ -13,7 +13,8 @@
             echo 
             sudo apt update 
             sleep 4
-
+            
+            sudo apt install mysql-server-8
             sudo apt install docker.io -y
             sleep 4
             
