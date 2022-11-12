@@ -37,6 +37,6 @@
             
             sleep 3
 
-            echo \"[Imagem de MySQL em Container Docker instalada...e tabelas mySQL criadas :)]"\
+            echo \"[Imagem de MySQL em Container Docker instalada...e tabelas mySQL criadas]"\
             sleep 3
     fi
