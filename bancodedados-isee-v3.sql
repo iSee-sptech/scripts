@@ -40,8 +40,8 @@ references Usuarios (idUsuario)
 
 create table Etiqueta (
 idEtiqueta int primary key auto_increment,
-fkMaquina int,
-nomeEtiqueta varchar(50),
+fkMaquina int unique,
+nomeEtiqueta varchar(50) unique,
 datahoraEtiqueta datetime,
 foreign key (fkMaquina)
 references Maquinas (idMaquina)
