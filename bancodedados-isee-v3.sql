@@ -32,10 +32,7 @@ cepMaquina char (9),
 numeroMaquina varchar (6),
 pontoDeReferencia varchar (25), 
 imgMaquina varchar (255),
-complementoMaquina varchar (50),
-fkUsuario int,
-foreign key (fkUsuario)
-references Usuarios (idUsuario)
+complementoMaquina varchar (50)
 );
 
 create table Etiqueta (
